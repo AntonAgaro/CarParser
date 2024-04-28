@@ -1,0 +1,1 @@
+export {avitoParser} from './parser/avitoParser'

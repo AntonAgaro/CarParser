@@ -1,0 +1,7 @@
+node_modules
+.idea
+.vscode
+.db_data
+pgadmin_data
+.env
+.DS_Store
