@@ -1,9 +1,10 @@
 import { avitoParser } from "./avito";
-
-const cookie = 'srv_id=mAapTn9pfF88lNqM.1tTT79LTvMNvY2s_ddkKv7g_Hc8vPvDCnmPOnb7liG7SvsFd9a0AQj1qkSKpMsjt7fGH.-SKnP8P9_u-nBGdMgh2XCxauDjj1g_teLH_bGEyWMnc=.web; u=32g7idlx.1i4fpho.dpvhhumzo5o0; buyer_location_id=621540; _gcl_au=1.1.1811569539.1714136737; _ym_uid=1714136737580459943; _ym_d=1714136737; gMltIuegZN2COuSe=EOFGWsm50bhh17prLqaIgdir1V0kgrvN; advcake_track_id=9a6faf80-8455-890a-6847-6625a725d9eb; advcake_session_id=f543b502-7a10-f440-d7ec-d941d0ab2f25; tmr_lvid=23ef490690e4071abcd34f862a35c843; tmr_lvidTS=1714136738243; _ga=GA1.1.198857269.1714136738; uxs_uid=ad9ab130-03cd-11ef-99c3-1fbaf37d739c; domain_sid=s5e8qSpDwSNVsTWg6cg9t%3A1714136739347; adrcid=AVNH8jZuogn8mttRpM4C_qg; _ga_ZJDLBTV49B=GS1.1.1714137394.1.1.1714140146.0.0.0; _ga_WW6Q1STJ8M=GS1.1.1714137394.1.1.1714140146.0.0.0; SEARCH_HISTORY_IDS=0; uuid=50e0db8cd6184624%3A1; __upin=WiAJQ3hNmz+AWv2bMpNQqg; buyer_laas_location=621540; yandex_monthly_cookie=true; luri=all; _ym_isad=2; f=5.ec06eee5aaa3fd87e13353bb2776fc0147e1eada7172e06c47e1eada7172e06c47e1eada7172e06c47e1eada7172e06cb59320d6eb6303c1b59320d6eb6303c1b59320d6eb6303c147e1eada7172e06c8a38e2c5b3e08b8915050aa46fdf52a40df103df0c26013a7b0d53c7afc06d0b2ebf3cb6fd35a0ac0df103df0c26013a8b1472fe2f9ba6b94bf3d8edfdd6175d7a4f9e17b6a8c78dc5033da27bc46070ab133e8e9e2fb30c55dea7d86f77f81946b8ae4e81acb9fad99271d186dc1cd0e992ad2cc54b8aa83de19da9ed218fe2143114829cf33ca724a135baa76198ded50b96489ab264ed3de19da9ed218fe23de19da9ed218fe2b5b87f59517a23f2e2415097439d40471a2a574992f83a9213974252838f5be48b9480d83b9d7585781fae5f646f6099e07dc2a09fb19339c4a99f8f1864719e2f36b05c80729b4ea2433337cbcf392f4525907271a6a0ebb1790f4eca16879f0bcee65dd4529c75e2415097439d404746b8ae4e81acb9fa786047a80c779d5146b8ae4e81acb9faf4cb7ab717b477b72da10fb74cac1eab2da10fb74cac1eabb3ae333f3b35fe91de6c39666ae9b0d744fd58b2aa6897b7c21977de676e125a; ft="WhCC9z4d2x5INHtZRHYWrzFgEJua+RHdF2O90MFWn4Z88vrMkDhj/Itqf4oIrHYQ8OinbOqSDi5T1Q9c3VWD8F4SqG7kWBSdUzMmc/0TUFfIywyTSe4+6XvOrl0zoIy5COa5jN1HMMkeq6wZK/95K6vEbHAOUtQopEzbKLfR9PTOVeCucwOptBiBJC4Gtl/a"; v=1714291093; dfp_group=20; _ym_visorc=b; adrdel=1; sx=H4sIAAAAAAAC%2F1TSS5LyOgyG4b1k3ANbsiW7dyNflIQOCRDI7S%2F2fooBfZoNPPXVK%2F1rDCOGHEhAUzaCWdRnyyqcpKC1zfe%2FZmm%2Bm2mP0wD13l%2FDzWyPnk9xh3EaTtzP%2Bzg2X01tvi1bh5bJ2OdXY1LBkIQCqRbGkrgkF4yPKQSopr7l5Wpd8rCzGQFDHVKfjM56P9ZHnKf1fxmiBUPPrwaQskka9LURCrqoZIxDyagCXN5ypjTtg9uGNssy4JHuQy9tOZtCP7GTv5sjOn5%2BNUREuTBppOjJUaycKsbC3uTMJb7lei4lH5sfumVGt9%2FXHzfHbbv293DMmv7IzN6%2BanBmBfYVgJEDGnHVZqdYUimx1F%2FZkT3uPm16dnLSbnWl03l92N3c7OGWvzWcxdfm4MjmZI0aUVsU0RRrBaUiqoPs3vKpPZbLAqO5yPJYXdjdgb3Pw7g%2F9vU2fXa2%2FiUnBStQq1Ew0RhBG5QwsFXDQr8XvM4xbG3fzSyb793P%2FYRHgHa2gG2bbh%2BbgcNLrpUJvGLRHNG9SouFIK9XgZR%2Fv05K1mlb7vK40NCNPJExYWn73p0nnz5%2BAzjE51cjHiqGKqWogHJytdTCQMGR1GLpLQ%2FnW7n1Q9tVyBiT0Gm5mn1IuUzrA%2BNnZ%2FPqrJTQhBCTS4gkqBwhOavRZ4Jk%2BS13cJ5GXM9jJ736rezex8coHfTxcunoc3Ok5%2FO%2FAAAA%2F%2F%2FDTRm8hQMAAA%3D%3D; abp=0; _ga_M29JC28873=GS1.1.1714291094.7.1.1714291111.43.0.0; _buzz_fpc=JTdCJTIycGF0aCUyMiUzQSUyMiUyRiUyMiUyQyUyMmRvbWFpbiUyMiUzQSUyMi53d3cuYXZpdG8ucnUlMjIlMkMlMjJleHBpcmVzJTIyJTNBJTIyTW9uJTJDJTIwMjglMjBBcHIlMjAyMDI1JTIwMDclM0E1OCUzQTMyJTIwR01UJTIyJTJDJTIyU2FtZVNpdGUlMjIlM0ElMjJMYXglMjIlMkMlMjJ2YWx1ZSUyMiUzQSUyMiU3QiU1QyUyMnVmcCU1QyUyMiUzQSU1QyUyMmY2Nzg0NTI5M2UyNWZmYWVkN2Q0YmFjM2Y3ZWY2NzMwJTVDJTIyJTJDJTVDJTIyYnJvd3NlclZlcnNpb24lNUMlMjIlM0ElNUMlMjIxMjQuMCU1QyUyMiU3RCUyMiU3RA==; _buzz_aidata=JTdCJTIycGF0aCUyMiUzQSUyMiUyRiUyMiUyQyUyMmRvbWFpbiUyMiUzQSUyMi53d3cuYXZpdG8ucnUlMjIlMkMlMjJleHBpcmVzJTIyJTNBJTIyTW9uJTJDJTIwMjglMjBBcHIlMjAyMDI1JTIwMDclM0E1OCUzQTMyJTIwR01UJTIyJTJDJTIyU2FtZVNpdGUlMjIlM0ElMjJMYXglMjIlMkMlMjJ2YWx1ZSUyMiUzQSUyMiU3QiU1QyUyMnVmcCU1QyUyMiUzQSU1QyUyMldpQUpRM2hObXolMkJBV3YyYk1wTlFxZyU1QyUyMiUyQyU1QyUyMmJyb3dzZXJWZXJzaW9uJTVDJTIyJTNBJTVDJTIyMTI0LjAlNUMlMjIlN0QlMjIlN0Q=; tmr_detect=0%7C1714291114376'
-avitoParser({ mark: "Ford", cookie: cookie });
-avitoParser({ mark: "Geely", cookie: cookie });
-avitoParser({ mark: "Haval", cookie: cookie });
+const cookie =
+    "srv_id=B3CS7fis0NHHIO4U.UyazBLiw6OJqMb2B7p8_gGH3ehPSmDkczkD8ZpRJBFV6aMQfeal6H8KJcRimlOPWdfJs.d_VKBnOCOPveqq6EYUGZovmvmQ7vNDfV_2Cr2pldQCw=.web; gMltIuegZN2COuSe=EOFGWsm50bhh17prLqaIgdir1V0kgrvN; u=32g8qj9f.14ojbps.pzvuajg3ixg0; v=1714331243; buyer_laas_location=641780; luri=novosibirsk; buyer_location_id=641780; sx=H4sIAAAAAAAC%2FwTAwQ3CMAwF0F3%2BmYOtOt9ytmkTF4lbQUBC1d15J0iydecejEJjpG%2B5RPcirXkP1BMfVMg9v%2BuQUK7Hcz7KnG%2B%2Bhm%2B7mozfgRsSVV3N1GnLdf0DAAD%2F%2Fz3TvcBbAAAA; dfp_group=30; abp=0; _gcl_au=1.1.1621613526.1714331244; _ga_M29JC28873=GS1.1.1714331244.1.0.1714331244.60.0.0; _ga=GA1.1.714319099.1714331245; tmr_lvid=23ef490690e4071abcd34f862a35c843; tmr_lvidTS=1714136738243; _ym_uid=1714136737580459943; _ym_d=1714331245; yandex_monthly_cookie=true; advcake_track_id=e18a09fd-f8d9-64ac-2558-e284587c0f01; advcake_session_id=560db73d-c584-b1f5-a9e9-9cafa077ff9d; adrcid=AVNH8jZuogn8mttRpM4C_qg; _ym_visorc=b; _ym_isad=2; adrdel=1; _buzz_fpc=JTdCJTIycGF0aCUyMiUzQSUyMiUyRiUyMiUyQyUyMmRvbWFpbiUyMiUzQSUyMi53d3cuYXZpdG8ucnUlMjIlMkMlMjJleHBpcmVzJTIyJTNBJTIyTW9uJTJDJTIwMjglMjBBcHIlMjAyMDI1JTIwMTklM0EwNyUzQTI1JTIwR01UJTIyJTJDJTIyU2FtZVNpdGUlMjIlM0ElMjJMYXglMjIlMkMlMjJ2YWx1ZSUyMiUzQSUyMiU3QiU1QyUyMnVmcCU1QyUyMiUzQSU1QyUyMmY2Nzg0NTI5M2UyNWZmYWVkN2Q0YmFjM2Y3ZWY2NzMwJTVDJTIyJTJDJTVDJTIyYnJvd3NlclZlcnNpb24lNUMlMjIlM0ElNUMlMjIxMjQuMCU1QyUyMiU3RCUyMiU3RA==; _buzz_aidata=JTdCJTIycGF0aCUyMiUzQSUyMiUyRiUyMiUyQyUyMmRvbWFpbiUyMiUzQSUyMi53d3cuYXZpdG8ucnUlMjIlMkMlMjJleHBpcmVzJTIyJTNBJTIyTW9uJTJDJTIwMjglMjBBcHIlMjAyMDI1JTIwMTklM0EwNyUzQTI1JTIwR01UJTIyJTJDJTIyU2FtZVNpdGUlMjIlM0ElMjJMYXglMjIlMkMlMjJ2YWx1ZSUyMiUzQSUyMiU3QiU1QyUyMnVmcCU1QyUyMiUzQSU1QyUyMldpQUpRM2hObXolMkJBV3YyYk1wTlFxZyU1QyUyMiUyQyU1QyUyMmJyb3dzZXJWZXJzaW9uJTVDJTIyJTNBJTVDJTIyMTI0LjAlNUMlMjIlN0QlMjIlN0Q=; tmr_detect=0%7C1714331247108";
+// import fetch from "node-fetch";
+// avitoParser({ mark: "Ford", cookie: cookie });
+// avitoParser({ mark: "Geely", cookie: cookie });
+// avitoParser({ mark: "Haval", cookie: cookie });
 // avitoParser({ mark: "Honda", cookie: cookie });
 // avitoParser({ mark: "Hyundai", cookie: cookie });
 // avitoParser({ mark: "Kia", cookie: cookie });
@@ -12,3 +13,35 @@ avitoParser({ mark: "Haval", cookie: cookie });
 // avitoParser({ mark: "Volkswagen", cookie: cookie });
 // avitoParser({ mark: "Renault", cookie: cookie });
 
+// fetch('http://localhost:3000/api/car-ad/create', {
+//     method: 'POST',
+//     body: JSON.stringify({
+//         carAd: {
+//             title: 'test title',
+//             price: 'test price',
+//             description: 'test descriptioqweqweqen',
+//             link: 'test link',
+//             source: 'avito'
+//         },
+//         tableName: 'test_table'
+//     }),
+//     headers: {
+//         'Content-Type': 'application/json'
+//     }
+// }).then(res => {
+//     console.log(res);
+//     return res.json()})
+//     .then(data => console.log(data)).catch(console.error)
+
+(async () => {
+//    await avitoParser({ mark: "Ford", cookie: cookie });
+// await avitoParser({ mark: "Geely", cookie: cookie });
+// await avitoParser({ mark: "Haval", cookie: cookie });
+await avitoParser({ mark: "Honda", cookie: cookie });
+await avitoParser({ mark: "Hyundai", cookie: cookie });
+await avitoParser({ mark: "Kia", cookie: cookie });
+await avitoParser({ mark: "Lexus", cookie: cookie });
+await avitoParser({ mark: "Opel", cookie: cookie });
+await avitoParser({ mark: "Volkswagen", cookie: cookie });
+await avitoParser({ mark: "Renault", cookie: cookie });
+})()

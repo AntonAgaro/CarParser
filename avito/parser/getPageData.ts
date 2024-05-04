@@ -19,6 +19,7 @@ export async function getPageData(page: Page) {
                 res.link = el
                     .querySelector('a[itemprop="url"]')
                     ?.getAttribute("href") ?? '';
+                res.source = 'avito';
                 return res as AdObj ;
             });
         },
